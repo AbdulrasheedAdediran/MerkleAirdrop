@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.4;
 
+
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
@@ -19,7 +20,9 @@ contract MerkleAirdrop{
         degenToken.transfer(msg.sender, _amount);
 
         claimed[msg.sender] = true;
-        success;
         emit claimedDrop(msg.sender, _amount);
+        success;
     }
+
+    
 }
