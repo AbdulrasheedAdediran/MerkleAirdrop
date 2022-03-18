@@ -1,0 +1,14 @@
+{
+    "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266": {
+        "leaf": "0xd888a6c4c9691090e26e47088a22f8863197050d84126210e32b9be346b53658",
+        "proof": [
+            "0xd3ac4c20e73788796a9331931e65badfccbc73e5ba50d38de13109ec79cea9d6"
+        ]
+    },
+    "0x70997970c51812dc3a010c7d01b50e0d17dc79c8": {
+        "leaf": "0xd3ac4c20e73788796a9331931e65badfccbc73e5ba50d38de13109ec79cea9d6",
+        "proof": [
+            "0xd888a6c4c9691090e26e47088a22f8863197050d84126210e32b9be346b53658"
+        ]
+    }
+}
