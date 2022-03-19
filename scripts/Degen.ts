@@ -3,7 +3,7 @@ import { ethers } from "hardhat";
 
 async function deployContract() {
 
-//     // Token Contract
+    // Token Contract
     const DegenToken = await ethers.getContractAt("DegenToken", "0x0feF87dD6E09A83f6F2AbC215115a783fF32DA20");
     // const DegenToken = await ethers.getContractFactory("DegenToken");
     // const degen_token = await DegenToken.deploy("Degen Token", "DGN");
@@ -19,9 +19,7 @@ async function deployContract() {
     // await merkle_airdrop.deployed();
         console.log("MerkleAidrop Contract Address:", merkle_airdrop.address);
     // MerkleAirdrop FTM Address: 0xce3E9c1150C535534430a41f5ff189bf1b9505e3
-    // MerkleAirdrop Rinkeby Address: 0x95Ca8c67F9C1FC4ff679d7B2213500398fe5C8c5
-    // console.log();
-    
+    // MerkleAirdrop Rinkeby Address: 0x95Ca8c67F9C1FC4ff679d7B2213500398fe5C8c5 
     
     // const [signer] = await ethers.getSigners();
     
