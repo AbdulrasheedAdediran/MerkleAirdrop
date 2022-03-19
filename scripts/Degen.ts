@@ -31,8 +31,22 @@ async function deployContract() {
     
     airdropContractBalance = await DegenToken.balanceOf(merkle_airdrop.address);
     console.log(`MerkleAirdrop contract balance after claim is: ${airdropContractBalance}`)
+
+    console.log("Sleeping.....");
+  // Wait for etherscan to notice that the contract has been deployed
+  await sleep(100000);
+
+  // Verify the contract after deploying
+    //@ts-ignore
+  await hre.run("verify:verify", {
+    address: merkle_airdrop.address,
+    constructorArguments: [],
+  });
 }
 
+function sleep(ms:number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
 deployContract().catch((error) => {
       console.error(error);
       process.exit(1);
