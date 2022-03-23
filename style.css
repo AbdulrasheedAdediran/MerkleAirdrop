@@ -1,0 +1,512 @@
+/*--- General ---*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: hsl(233, 8%, 62%);
+}
+a {
+  text-decoration: none;
+  color: hsl(233, 8%, 62%);
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/*--- Desktop and Mobile Start ---*/
+
+/*--- Nav ---*/
+
+nav {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7%;
+  height: 3rem;
+  font-size: 1rem;
+  transition: 0.3s ease-out;
+  position: fixed;
+  background-color: hsl(0, 0%, 100%);
+  z-index: 200;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 70%;
+}
+.nav-links {
+  padding-left: 10%;
+}
+nav .nav-logo {
+  display: flex;
+  align-self: center;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  text-align: center;
+}
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid hsl(192, 70%, 51%);
+}
+
+.nav-btn {
+  display: flex;
+  align-self: center;
+}
+
+.btn {
+  display: inline-block;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+.why-easybank {
+  background: hsl(220, 16%, 96%);
+  padding: 5% 7%;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+.why-choose-easybank {
+  padding-bottom: 3em;
+}
+
+.why-easybank h2,
+h3 {
+  color: hsl(233, 26%, 24%);
+  padding: 1em 0;
+  font-weight: 300;
+}
+.articles {
+  background: hsl(0, 0%, 98%);
+  padding: 5% 7%;
+  text-align: left;
+}
+.articles h2,
+h4 {
+  color: hsl(233, 26%, 24%);
+  padding: 1em 0;
+  font-weight: 300;
+}
+figcaption {
+  font-size: 0.7em;
+  padding: 1em 0 0 1.5em;
+}
+
+.latest-articles div {
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.3em;
+  padding-bottom: 2em;
+}
+.latest-articles div img {
+  width: 100%;
+  height: 13em;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+.latest-articles h4 {
+  padding: 1em;
+}
+.latest-articles p {
+  padding: 0 1em;
+}
+
+footer {
+  background: hsl(233, 26%, 24%);
+}
+.footer-logo {
+  color: hsl(0, 0%, 100%);
+}
+footer li a {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+}
+.attribution {
+  font-size: 10px;
+  text-align: center;
+  background: hsl(233, 26%, 24%);
+  padding: 1rem 0 0 0;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
+
+.login{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*--- Desktop Start ---*/
+@media (min-width: 769px) {
+  .toggle-menu {
+    display: none;
+  }
+  nav ul li a {
+    font-size: 0.85rem;
+  }
+  /*--- Header ---*/
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    background: hsl(0, 0%, 98%);
+    height: 80vh;
+    overflow-y: hidden;
+  }
+  .bg-mockup {
+    background: url("./images/bg-intro-desktop.svg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 80%;
+    min-width: 70%;
+    height: 105%;
+    margin-left: -10%;
+    transform: translate(22%, 0%);
+  }
+  .bg-mockup img {
+    position: absolute;
+    top: -15%;
+    left: 10%;
+    height: 130%;
+    width: 90%;
+    padding: 0 7%;
+    transform: translateY(-20% 10%);
+    z-index: 10;
+    overflow-y: visible;
+  }
+
+  header .next-generation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin-left: 7%;
+    width: 32%;
+    text-align: left;
+  }
+  header h1 {
+    color: hsl(233, 26%, 24%);
+    font-weight: 300;
+    font-size: 2.2em;
+    letter-spacing: 1.5px;
+    width: 100%;
+  }
+  header p {
+    margin: 1em 0;
+  }
+  header .btn {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .easybank-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .latest-articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    justify-content: center;
+    text-align: left;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 3% 7%;
+  }
+  footer * {
+    margin: 1em 0;
+    align-items: center;
+  }
+  .logo-and-socials {
+    grid-column: 1/3;
+  }
+  .footer-logo {
+    margin: 0 0 1em 0;
+  }
+  .footer-links {
+    text-align: right;
+    justify-content: space-between;
+  }
+
+  .btn-and-copy {
+    grid-column: 6/9;
+    text-align: right;
+  }
+}
+/*--- Desktop End ---*/
+
+/*--- Tablet-Start ---*/
+
+@media (max-width: 768px) and (min-width: 480px) {
+  /*--- Header ---*/
+  header {
+    background: hsl(0, 0%, 98%);
+  }
+
+  .bg-mockup {
+    background: url("./images/bg-intro-mobile.svg");
+    background-position: center;
+    background-size: cover;
+    max-height: 53vh;
+    width: 100%;
+    position: relative;
+  }
+  .bg-mockup img {
+    position: relative;
+    padding: 0 5% 0 5%;
+    width: 100%;
+    max-height: 80vh;
+    transform: translateY(-29%);
+  }
+  header h1 {
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto 0.5em auto;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+  }
+  .next-generation {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+  }
+  header .btn {
+    margin: 2em auto;
+  }
+  .easybank-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2em;
+    column-gap: 1.5em;
+    justify-content: center;
+    text-align: left;
+  }
+  .latest-articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5em;
+    row-gap: 2em;
+    justify-content: center;
+    text-align: left;
+  }
+  footer {
+    background: hsl(233, 26%, 24%);
+    text-align: center;
+    display: grid;
+    align-self: space-between;
+    padding: 2em;
+  }
+  footer img,
+  li,
+  .btn {
+    margin-bottom: 1.5em;
+  }
+}
+
+/*--- Tablet-End ---*/
+
+/*--- Mobile-Start ---*/
+
+@media (max-width: 768px) {
+  .toggle-menu {
+    background-image: url(./images/icon-hamburger.svg);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    aspect-ratio: 1;
+    width: 1.5rem;
+    cursor: pointer;
+  }
+  .close {
+    background-image: url(./images/icon-close.svg);
+  }
+  nav div {
+    background: linear-gradient(
+      to bottom,
+      hsla(233, 26%, 24%, 1),
+      hsla(233, 8%, 62%, 0.1)
+    );
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 0 1.5rem;
+    inset: 3rem 0 0 0;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-200%);
+    transition: all 0.5s ease-out;
+  }
+  @keyframes displayMenu {
+    0% {
+      transform: translateY(1%);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  .show {
+    transform: translateY(0%);
+    animation: displayMenu 0.5s ease-out forwards;
+  }
+  .nav-links {
+    display: inline-block;
+    margin: auto;
+  }
+  nav .btn {
+    display: flex;
+    margin: auto;
+    position: absolute;
+    bottom: 1rem;
+  }
+  .nav-links {
+    background: hsl(0, 0%, 100%);
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 5px;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 0;
+    width: 100%;
+  }
+  nav li a {
+    display: inline-block;
+    color: hsl(233, 26%, 24%);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: auto;
+    width: 100%;
+  }
+  .nav-links li a:hover {
+    color: hsl(233, 8%, 62%);
+    transition: ease 10ms;
+    border: none;
+  }
+  .nav-btn {
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /*--- Header ---*/
+  header {
+    background: hsl(0, 0%, 98%);
+  }
+
+  .bg-mockup {
+    background: url("./images/bg-intro-mobile.svg");
+    background-position: center;
+    background-size: cover;
+    max-height: 45vh;
+    width: 100%;
+    position: relative;
+  }
+  .bg-mockup img {
+    position: relative;
+    padding: 0 2.5% 0 2.5%;
+    width: 100%;
+    max-height: 60vh;
+    transform: translateY(-25%);
+  }
+  header h1 {
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto 0.5em auto;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+  }
+  .next-generation {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+  }
+  header .btn {
+    margin: 2em auto;
+  }
+  .why-choose-easybank {
+    text-align: center;
+  }
+  .easybank-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+    justify-content: center;
+    text-align: center;
+  }
+  .latest-articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.5em;
+    row-gap: 2em;
+    justify-content: center;
+    text-align: left;
+  }
+  footer {
+    background: hsl(233, 26%, 24%);
+    text-align: center;
+    display: grid;
+    align-self: space-between;
+    padding: 2em;
+  }
+  footer img,
+  li,
+  .btn {
+    margin-bottom: 1.5em;
+  }
+}
+
+/*--- Mobile-End ---*/

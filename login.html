@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="linear-gradient(
+    to bottom,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  )"> 
+<link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://fonts.google.com/specimen/Public+Sans">
+    <title>Easybank Login</title>
+</head>
+<body class="login">
+    
+      <button class="btn login_btn" onclick="login()">Login</button>
+      <button class="btn logout_btn" onclick="authx.logout()">Log Out</button>
+      
+</body>
+
+      <script src="https://ajs.radius.africa/authx.js"></script>
+      <script type="text/javascript">
+        function loginHandler (session, message) {
+            console.log('logged in ', session, message)
+            console.log('Session = ', authx.getSession())
+        }
+        const authx = AuthX("woyXw0ePfgBIJEW50zH7vwODKHDKWYiMOjLVxSJf", {
+            redirect_uri: "https://fem-easybanklandingpage.netlify.app",
+            locale: 'en',
+            isSpa: true,
+            onComplete: loginHandler,
+            onError: function (error) {
+                alert(error.message)
+            }
+        })
+
+        function login() {
+            authx.initiateSession()
+        }
+      </script>
+      
+</html>
